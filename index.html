@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pregnancy AI — Your Companion from Week 4 to 40</title>
+<meta name="description" content="A warm, AI-powered pregnancy companion. Chat with Lola, your personal AI midwife, predict your baby's gender from a scan, check your test line, and find calm answers any time of day." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">P</span>
+      Pregnancy<span style="color:var(--accent-rose)">AI</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ai-midwife.html">AI Midwife</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Tools</button>
+        <div class="nav-dropdown-menu">
+          <a href="tools.html">All Tools</a>
+          <a href="tools/baby-gender-prediction.html">Baby Gender Prediction</a>
+          <a href="tools/ai-midwife-companion.html">AI Midwife Companion</a>
+          <a href="tools/baby-face-generator.html">Baby Face Generator</a>
+          <a href="tools/pregnancy-test-line-checker.html">Test Line Checker</a>
+          <a href="tools/cravings-generator.html">Cravings Generator</a>
+          <a href="tools/birth-plan-builder.html">AI Birth Plan Builder</a>
+          <a href="tools/document-explainer.html">Medical Document Explainer</a>
+          <a href="tools/baby-hazard-analyzer.html">Baby Hazard Analyzer</a>
+          <a href="tools/baby-name-generator.html">AI Baby Name Generator</a>
+          <a href="tools/kick-tracker.html">Baby Kick Tracker</a>
+          <a href="tools/appointment-manager.html">Appointment Manager</a>
+          <a href="tools/hospital-bag-checklist.html">Hospital Bag Checklist</a>
+        </div>
+      </li>
+      <li><a href="#download" class="nav-cta">Get the App</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow"><span class="dot"></span>Built with care for every parent-to-be</span>
+        <h1>A calm, AI companion for every week of your pregnancy.</h1>
+        <p class="lead">Chat with Lola, your personal AI midwife, get instant gender predictions from your scan, and check your test lines with image-clarity tech. Forty weeks of support, in one quiet place.</p>
+        <div class="store-badges" id="download">
+          <a class="store-badge" href="#" aria-label="Download on the App Store">
+            <svg class="store-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+            <span class="store-badge-text">
+              <span class="store-badge-small">Download on the</span>
+              <span class="store-badge-name">App Store</span>
+            </span>
+          </a>
+          <a class="store-badge" href="#" aria-label="Get it on Google Play">
+            <svg class="store-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.198-3.198l2.553 1.479c.832.482.832 1.682 0 2.165l-2.552 1.479L15.155 12l2.542-2.491zM5.864 2.658L16.802 8.99l-2.302 2.302L5.864 2.658z"/></svg>
+            <span class="store-badge-text">
+              <span class="store-badge-small">Get it on</span>
+              <span class="store-badge-name">Google Play</span>
+            </span>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="avatar-stack">
+            <div class="avatar"></div><div class="avatar"></div><div class="avatar"></div><div class="avatar"></div>
+          </div>
+          <span>Trusted by thousands of expecting families across the world.</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="placeholder">[ App preview image ]<br/><span style="font-size:.85rem;opacity:.7">Replace with phone mockup</span></div>
+        <div class="hero-floating-card top">
+          <span class="icon-circle">✦</span>
+          <span>Lola says: drink some water, you've got this.</span>
+        </div>
+        <div class="hero-floating-card bottom">
+          <span class="icon-circle">♡</span>
+          <span>Week 22 · feeling those flutters</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Three things, done well</span>
+      <h2>Everything you need, nothing that overwhelms.</h2>
+      <p>We built Pregnancy AI to feel less like a clinical app and more like having a friend who happens to know everything about pregnancy.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">✦</div>
+        <h3>Ask Lola anything</h3>
+        <p>3am cramping? Weird craving? Conflicting advice from family? Lola is up — calm, kind, and specific to where you are in your pregnancy.</p>
+        <a href="ai-midwife.html">Meet Lola</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◐</div>
+        <h3>Predict your baby's gender</h3>
+        <p>Upload your ultrasound from week 6 onward and get an instant prediction with a clear confidence score. Save it for the gender reveal.</p>
+        <a href="tools/baby-gender-prediction.html">Try the predictor</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⊕</div>
+        <h3>Check your test line</h3>
+        <p>Faint line? Squinter? Our line checker enhances your test photo so you can see what's actually there, then helps you read it.</p>
+        <a href="tools/pregnancy-test-line-checker.html">Check a test</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-soft">
+  <div class="container">
+    <div class="split">
+      <div class="split-image">
+        [ Lola portrait ]
+      </div>
+      <div class="split-text">
+        <span class="section-eyebrow">Your personal AI midwife</span>
+        <h2>Meet Lola. She's been waiting for you.</h2>
+        <p>Lola is our Maternal Intelligence Model — an AI trained on guidance from trusted clinical sources including NHS and NICE, then taught to speak human. She remembers what week you're in, what you asked yesterday, and how you said you were feeling.</p>
+        <ul class="split-list">
+          <li>Available every minute of every day, including the 2am ones</li>
+          <li>Responses tailored to your trimester and personal history</li>
+          <li>Clear about what's normal, and what's worth a call to your provider</li>
+          <li>Never judgmental — pregnancy is messy, she gets it</li>
+        </ul>
+        <div class="split-cta">
+          <a href="ai-midwife.html" class="btn btn-primary">Learn more about Lola</a>
+          <a href="#download" class="btn btn-secondary">Download the app</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split reverse">
+      <div class="split-text">
+        <span class="section-eyebrow">Baby gender predictor</span>
+        <h2>One scan. Seconds later. A guess you can share.</h2>
+        <p>Drop in your 12 or 20-week scan and our prediction model studies the angles a sonographer would look at. You'll get a result, a confidence score, and a clean image you can save or share with your partner.</p>
+        <ul class="split-list">
+          <li>Works from as early as week 6</li>
+          <li>Built for the angles ultrasound photos actually come in</li>
+          <li>Save predictions privately or share to your favourite chat</li>
+        </ul>
+        <div class="split-cta">
+          <a href="tools/baby-gender-prediction.html" class="btn btn-rose">Try the predictor</a>
+        </div>
+      </div>
+      <div class="split-image">[ Predictor screen ]</div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-soft">
+  <div class="container">
+    <div class="split">
+      <div class="split-image">[ Test line checker UI ]</div>
+      <div class="split-text">
+        <span class="section-eyebrow">Pregnancy test line checker</span>
+        <h2>Squinting at a faint line? Let us see it for you.</h2>
+        <p>Snap a photo of your test and we'll enhance the contrast so a real line is unmistakable — or so you can stop wondering if you're imagining one. Track tests over days to watch the line darken, and share with our community for a second pair of eyes.</p>
+        <ul class="split-list">
+          <li>AI-powered image enhancement for clarity</li>
+          <li>Track multiple tests across days to see progression</li>
+          <li>Optional community share for a kind second opinion</li>
+        </ul>
+        <div class="split-cta">
+          <a href="tools/pregnancy-test-line-checker.html" class="btn btn-rose">Check a test</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">A toolkit for the whole journey</span>
+      <h2>Twelve thoughtful tools, one app.</h2>
+      <p>From baby names to hazard checks to hospital bag prep — every tool is designed to answer a real question we've been asked at 3am.</p>
+    </div>
+    <div class="tools-grid">
+      <a class="tool-card" href="tools/baby-gender-prediction.html">
+        <div class="tool-card-icon">♀♂</div>
+        <h4>Baby Gender Prediction</h4>
+        <p>Upload your scan, get an instant prediction with confidence score.</p>
+        <span class="tool-card-cta">Try it →</span>
+      </a>
+      <a class="tool-card" href="tools/ai-midwife-companion.html">
+        <div class="tool-card-icon">✦</div>
+        <h4>AI Midwife Companion</h4>
+        <p>Ask Lola anything, any time. Personalised to your week.</p>
+        <span class="tool-card-cta">Chat now →</span>
+      </a>
+      <a class="tool-card" href="tools/baby-face-generator.html">
+        <div class="tool-card-icon">☺</div>
+        <h4>Baby Face Generator</h4>
+        <p>A playful peek at what your little one might look like.</p>
+        <span class="tool-card-cta">Generate →</span>
+      </a>
+      <a class="tool-card" href="tools/pregnancy-test-line-checker.html">
+        <div class="tool-card-icon">⊕</div>
+        <h4>Pregnancy Test Line Checker</h4>
+        <p>Enhance test photos and read faint lines with confidence.</p>
+        <span class="tool-card-cta">Check a test →</span>
+      </a>
+      <a class="tool-card" href="tools/cravings-generator.html">
+        <div class="tool-card-icon">◔</div>
+        <h4>Pregnancy Cravings Generator</h4>
+        <p>Stuck staring at the fridge? Get an idea you'll actually want.</p>
+        <span class="tool-card-cta">Crave →</span>
+      </a>
+      <a class="tool-card" href="tools/birth-plan-builder.html">
+        <div class="tool-card-icon">✎</div>
+        <h4>AI Birth Plan Builder</h4>
+        <p>Walk through your preferences and end with a plan you can print.</p>
+        <span class="tool-card-cta">Build →</span>
+      </a>
+      <a class="tool-card" href="tools/document-explainer.html">
+        <div class="tool-card-icon">⎙</div>
+        <h4>Medical Document Explainer</h4>
+        <p>Plain-English translations of confusing scan reports and bloods.</p>
+        <span class="tool-card-cta">Explain →</span>
+      </a>
+      <a class="tool-card" href="tools/baby-hazard-analyzer.html">
+        <div class="tool-card-icon">⚠</div>
+        <h4>Baby Hazard Analyzer</h4>
+        <p>Snap a room and see what to childproof before they're crawling.</p>
+        <span class="tool-card-cta">Analyse →</span>
+      </a>
+      <a class="tool-card" href="tools/baby-name-generator.html">
+        <div class="tool-card-icon">A</div>
+        <h4>AI Baby Name Generator</h4>
+        <p>Names that match the vibe, the meaning, or just go with the surname.</p>
+        <span class="tool-card-cta">Find names →</span>
+      </a>
+      <a class="tool-card" href="tools/kick-tracker.html">
+        <div class="tool-card-icon">♡</div>
+        <h4>Baby Kick Tracker</h4>
+        <p>A simple way to track movement and spot the patterns that matter.</p>
+        <span class="tool-card-cta">Track →</span>
+      </a>
+      <a class="tool-card" href="tools/appointment-manager.html">
+        <div class="tool-card-icon">▦</div>
+        <h4>Appointment Manager</h4>
+        <p>Every scan, midwife visit and class — in one calm place.</p>
+        <span class="tool-card-cta">Organise →</span>
+      </a>
+      <a class="tool-card" href="tools/hospital-bag-checklist.html">
+        <div class="tool-card-icon">▣</div>
+        <h4>Hospital Bag Checklist</h4>
+        <p>The list every mum says she wished she had earlier.</p>
+        <span class="tool-card-cta">Open list →</span>
+      </a>
+    </div>
+    <div class="text-center" style="margin-top: 40px;">
+      <a href="tools.html" class="btn btn-secondary">Explore all tools</a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">From the blog</span>
+      <h2>A weekly read, from week 4 to 40.</h2>
+      <p>Short, calm, evidence-led updates on what's happening with your body, your baby, and your head this week.</p>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="blog-card-image">[ Week 40 ]</div>
+        <div class="blog-card-body">
+          <span class="blog-card-meta">Week 40 · Third trimester</span>
+          <h3>40 weeks pregnant: the long wait, the quiet questions</h3>
+          <p>Forty weeks doesn't always mean baby day. Here's what's normal at full term, when to ring your midwife, and how to keep your head steady while you wait.</p>
+          <a class="read-more" href="blog.html">Read article →</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card-image">[ Week 39 ]</div>
+        <div class="blog-card-body">
+          <span class="blog-card-meta">Week 39 · Third trimester</span>
+          <h3>39 weeks: signs of early labour, and the ones that aren't</h3>
+          <p>The difference between a Braxton Hicks tightening and the real thing — plus a checklist for what to do when contractions start.</p>
+          <a class="read-more" href="blog.html">Read article →</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card-image">[ Week 38 ]</div>
+        <div class="blog-card-body">
+          <span class="blog-card-meta">Week 38 · Third trimester</span>
+          <h3>38 weeks: nesting, sleeping, and that one hospital bag thing</h3>
+          <p>You're nearly there. A gentle guide to the last fortnight, the small comforts that help, and the items mums say they wished they'd packed.</p>
+          <a class="read-more" href="blog.html">Read article →</a>
+        </div>
+      </article>
+    </div>
+    <div class="text-center" style="margin-top: 40px;">
+      <a href="blog.html" class="btn btn-secondary">Open the blog</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Frequently asked</span>
+      <h2>The things people ask before they download.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">What does Pregnancy AI actually do?<span class="toggle">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Pregnancy AI is a companion app for the forty weeks of pregnancy. You can chat with Lola, our AI midwife, upload your scan for a gender prediction, check pregnancy test lines, and use a dozen tools that handle everything from birth plans to hospital bag checklists. It's designed to sit quietly beside your pregnancy — not replace your midwife or doctor.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is the AI a real midwife?<span class="toggle">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Lola is an AI model trained on guidance from established clinical sources like NHS and NICE. She's brilliant for general questions, reassurance and triaging your worries — but she's not a substitute for your midwife or GP. If something feels off, please call them.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is my data safe?<span class="toggle">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Your scans, photos and chats are encrypted in transit and at rest. We never sell personal data, and you can permanently delete your account and everything in it from inside the app at any time.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What if something is urgent?<span class="toggle">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Lola is trained to recognise red-flag symptoms and will always tell you to contact your maternity unit or emergency services if something sounds urgent. The app isn't an emergency service — if you think something is wrong, please call your provider directly.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How accurate is the gender predictor?<span class="toggle">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Predictions improve dramatically the further along you are. From around 12 weeks the model is highly accurate on a clear scan; earlier than that it's a fun guess with a confidence score. We always show you how confident we are, and we never claim to replace a sonographer.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How much does it cost?<span class="toggle">+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Pregnancy AI is free to download with a generous free tier. A small monthly subscription unlocks unlimited Lola chats, scan predictions, and the full toolkit. There's a 7-day free trial.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="cta-banner">
+    <h2>Because every decision matters.</h2>
+    <p>Get Pregnancy AI on your phone and have a calm, capable companion for the next forty weeks.</p>
+    <div class="store-badges">
+      <a class="store-badge" href="#">
+        <svg class="store-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+        <span class="store-badge-text"><span class="store-badge-small">Download on the</span><span class="store-badge-name">App Store</span></span>
+      </a>
+      <a class="store-badge" href="#">
+        <svg class="store-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.198-3.198l2.553 1.479c.832.482.832 1.682 0 2.165l-2.552 1.479L15.155 12l2.542-2.491zM5.864 2.658L16.802 8.99l-2.302 2.302L5.864 2.658z"/></svg>
+        <span class="store-badge-text"><span class="store-badge-small">Get it on</span><span class="store-badge-name">Google Play</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>PregnancyAI</h3>
+        <p>A calmer, kinder companion for every week of pregnancy. Built with care, with you in mind.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.7a8.16 8.16 0 0 0 4.77 1.52V6.78a4.85 4.85 0 0 1-1.84-.09Z"/></svg></a>
+          <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="ai-midwife.html">AI Midwife</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="ai-midwife.html">About Lola</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PregnancyAI. Made with warmth.</p>
+      <p>hello@pregnancyai.app</p>
+    </div>
+    <p class="footer-disclaimer">Pregnancy AI is for informational and entertainment purposes only. It is not a medical device and is not a substitute for professional medical advice, diagnosis or treatment. If you think something is wrong, contact your healthcare provider or local emergency services.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
