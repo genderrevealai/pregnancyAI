@@ -113,29 +113,23 @@ p { color: var(--text-secondary); }
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
   color: var(--text-primary);
-  letter-spacing: -0.01em;
+  line-height: 0;
 }
 
 .brand:hover { color: var(--text-primary); }
 
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-pink-soft), var(--accent-rose));
-  display: grid;
-  place-items: center;
-  color: white;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1rem;
+.brand-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  color: inherit;
+}
+
+@media (max-width: 540px) {
+  .brand-logo { height: 26px; }
 }
 
 .nav-links {
@@ -487,6 +481,16 @@ p { color: var(--text-secondary); }
   padding: 24px;
 }
 
+.hero-image img,
+.hero-image video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .hero-floating-card {
   position: absolute;
   background: var(--bg-card);
@@ -643,6 +647,14 @@ p { color: var(--text-secondary); }
   font-family: var(--font-display);
 }
 
+.split-image img,
+.split-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .split-text h2 {
   margin-bottom: 20px;
 }
@@ -721,6 +733,15 @@ p { color: var(--text-secondary); }
   color: var(--accent-rose-dark);
   font-family: var(--font-display);
   font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.blog-card-image img,
+.blog-card-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .blog-card-body {
@@ -956,6 +977,13 @@ p { color: var(--text-secondary); }
   color: white;
   margin-bottom: 14px;
   font-size: 1.4rem;
+}
+
+.footer-brand .brand-logo {
+  height: 36px;
+  width: auto;
+  color: white;
+  margin-bottom: 16px;
 }
 
 .footer-brand p {
@@ -1211,6 +1239,71 @@ p { color: var(--text-secondary); }
 .stat-label {
   font-size: 0.92rem;
   color: var(--text-muted);
+}
+
+/* Video embed */
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-cream-soft);
+}
+
+.video-embed iframe,
+.video-embed video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+/* Tool card with preview image at top */
+.tool-card-image {
+  width: calc(100% + 48px);
+  margin: -24px -24px 4px;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-blush), var(--accent-pink-soft));
+}
+
+.tool-card-image img,
+.tool-card-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.tool-card:hover .tool-card-image img,
+.tool-card:hover .tool-card-image video {
+  transform: scale(1.04);
+}
+
+/* Tool hero image (used on individual tool pages) */
+.tool-hero-image {
+  margin: 32px auto 0;
+  max-width: 720px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, var(--accent-blush), var(--accent-pink-soft));
+}
+
+.tool-hero-image img,
+.tool-hero-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Quote */
