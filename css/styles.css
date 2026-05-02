@@ -771,9 +771,206 @@ p { color: var(--text-secondary); }
   flex: 1;
 }
 
-.blog-card a.read-more {
+.blog-card a.read-more,
+.blog-card .read-more {
   font-weight: 600;
   font-size: 0.9rem;
+  color: var(--accent-rose);
+}
+
+/* Stretched link — makes the whole card clickable while keeping markup semantic */
+.blog-card { position: relative; }
+.blog-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.blog-card-link:focus-visible {
+  outline: 2px solid var(--accent-rose);
+  outline-offset: 4px;
+  border-radius: var(--radius-lg);
+}
+
+/* Featured posts get a subtle highlight */
+.blog-card.is-featured {
+  border-color: var(--accent-pink-soft);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Empty-state message */
+.blog-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------- Category Chips ---------- */
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 0 32px;
+}
+
+.category-chip {
+  appearance: none;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.category-chip:hover {
+  background: var(--bg-cream-soft);
+  border-color: var(--accent-pink-soft);
+}
+
+.category-chip.is-active {
+  background: var(--accent-rose);
+  color: #fff;
+  border-color: var(--accent-rose);
+}
+
+/* ---------- Blog Post Page ---------- */
+.blog-post {
+  background: var(--bg-cream);
+  padding-bottom: 48px;
+}
+
+.post-hero {
+  padding: 56px 0 32px;
+  text-align: center;
+}
+
+.post-back {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.post-back:hover {
+  color: var(--accent-rose);
+}
+
+.post-meta {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-rose-dark);
+  margin-bottom: 16px;
+}
+
+.post-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 auto 20px;
+  max-width: 760px;
+  line-height: 1.15;
+}
+
+.post-hero .lead {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.post-hero-image-wrap {
+  margin: 32px auto;
+  max-width: 960px;
+}
+
+.post-hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: var(--shadow-md);
+}
+
+.post-body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.post-content {
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.post-content > p,
+.post-content > ul,
+.post-content > ol,
+.post-content > blockquote {
+  margin-bottom: 1.25em;
+}
+
+.post-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin: 1.8em 0 0.6em;
+  line-height: 1.25;
+}
+
+.post-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin: 1.6em 0 0.5em;
+}
+
+.post-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.post-content a {
+  color: var(--accent-rose);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-content a:hover {
+  color: var(--accent-rose-dark);
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.4em;
+}
+
+.post-content li { margin-bottom: 0.4em; }
+
+.post-content blockquote {
+  border-left: 3px solid var(--accent-pink-soft);
+  padding-left: 20px;
+  margin-left: 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin: 1.5em 0;
 }
 
 /* ---------- Tools Grid ---------- */

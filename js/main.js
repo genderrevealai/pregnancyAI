@@ -33,6 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Blog category filter
+  const chips = document.querySelectorAll(".category-chip");
+  const cards = document.querySelectorAll(".blog-card");
+  if (chips.length && cards.length) {
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        const cat = chip.dataset.category;
+        chips.forEach((c) => c.classList.toggle("is-active", c === chip));
+        cards.forEach((card) => {
+          const show = cat === "all" || card.dataset.category === cat;
+          card.style.display = show ? "" : "none";
+        });
+      });
+    });
+  }
+
   // Contact form (demo)
   const form = document.querySelector("[data-contact-form]");
   if (form) {

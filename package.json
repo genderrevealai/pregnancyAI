@@ -1,0 +1,16 @@
+{
+  "name": "pregnancyai-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pregnancy AI marketing website — static HTML with build-time blog rendering from Supabase.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}
