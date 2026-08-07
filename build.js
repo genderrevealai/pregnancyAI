@@ -39,17 +39,20 @@ const STATIC_TOP_FILES = [
   "tools.html",
 ];
 
-// "auth" and "reset-password" hold the Supabase redirect landing pages. They are
-// directory-and-index.html so they serve at the extensionless /auth/callback and
-// /reset-password paths the app's email templates point at.
+// Each of these is copied to dist/ as-is. The directory-and-index.html entries
+// serve at extensionless paths: "auth" and "reset-password" hold the Supabase
+// redirect landing pages the app's email templates point at, and the two legal
+// directories match the /privacy-policy and /terms-conditions URLs the iOS app
+// links to and Apple's reviewers check.
 const STATIC_DIRS = [
   "css",
   "js",
   "images",
-  "legal",
   "tools",
   "auth",
   "reset-password",
+  "privacy-policy",
+  "terms-conditions",
 ];
 
 async function main() {
