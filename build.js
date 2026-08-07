@@ -33,7 +33,6 @@ const DB = {
 };
 
 const STATIC_TOP_FILES = [
-  "index.html",
   "ai-midwife.html",
   "contact.html",
   "faqs.html",
@@ -89,6 +88,12 @@ async function main() {
   for (const d of STATIC_DIRS) {
     fs.cpSync(path.join(ROOT, d), path.join(OUT, d), { recursive: true });
   }
+
+  const homeTpl = fs.readFileSync(path.join(ROOT, "index.html"), "utf-8");
+  fs.writeFileSync(
+    path.join(OUT, "index.html"),
+    renderHome(homeTpl, enriched)
+  );
 
   const listingTpl = fs.readFileSync(path.join(ROOT, "blog.html"), "utf-8");
   fs.writeFileSync(
@@ -147,6 +152,22 @@ function formatDate(d) {
     month: "long",
     day: "numeric",
   });
+}
+
+function renderHome(template, posts) {
+  const byWeek = new Map();
+  for (const p of posts) {
+    if (p.week == null || !p.featured_image_url) continue;
+    if (!byWeek.has(p.week)) byWeek.set(p.week, p);
+  }
+  return template.replace(
+    /<div class="blog-card-image">\[ Week (\d+) \]<\/div>/g,
+    (match, weekStr) => {
+      const post = byWeek.get(parseInt(weekStr, 10));
+      if (!post) return match;
+      return `<div class="blog-card-image"><img src="${escapeAttr(post.featured_image_url)}" alt="${escapeAttr(post.title)}" loading="lazy" /></div>`;
+    }
+  );
 }
 
 function renderListing(template, posts, categories) {
