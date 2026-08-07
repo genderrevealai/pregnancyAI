@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="referrer" content="no-referrer" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Reset your password · Pregnancy AI</title>
+<meta name="description" content="Finish resetting your Pregnancy AI password in the app." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg-cream: #FBF6F0;
+    --bg-card: #FFFFFF;
+    --accent-rose: #C77B6F;
+    --accent-rose-dark: #A8584D;
+    --accent-blush: #F4DCD2;
+    --text-primary: #1F1B17;
+    --text-secondary: #4A423B;
+    --text-muted: #847B72;
+    --border-soft: #E5DCD2;
+    --radius-lg: 24px;
+    --radius-full: 999px;
+    --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-cream);
+    color: var(--text-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .shell { width: 100%; max-width: 440px; }
+
+  .brand {
+    display: block;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(31, 27, 23, 0.06), 0 8px 24px rgba(31, 27, 23, 0.06);
+  }
+
+  .icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-blush);
+    color: var(--accent-rose-dark);
+  }
+  .icon svg { width: 30px; height: 30px; display: block; }
+  .icon.is-success { background: #E4EADF; color: #5E7350; }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .body-text {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 24px;
+    border: 0;
+    border-radius: var(--radius-full);
+    background: var(--accent-rose);
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    -webkit-appearance: none;
+  }
+  .btn:hover, .btn:focus-visible { background: var(--accent-rose-dark); }
+  .btn:focus-visible { outline: 2px solid var(--accent-rose-dark); outline-offset: 3px; }
+
+  .hint {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 16px;
+  }
+
+  .footnote {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 20px;
+  }
+  .footnote a { color: var(--text-muted); text-decoration: underline; }
+
+  [data-state] { display: none; }
+  [data-state].is-active { display: block; }
+
+  @media (min-width: 480px) {
+    .card { padding: 40px 36px; }
+    h1 { font-size: 30px; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .card { animation: rise 0.3s ease-out; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: none; }
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <span class="brand">Pregnancy AI</span>
+
+  <main class="card">
+
+    <div data-state="pending" class="is-active">
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 3a9 9 0 1 0 9 9" />
+        </svg>
+      </div>
+      <h1>Checking your link</h1>
+      <p class="body-text">One moment.</p>
+    </div>
+
+    <div data-state="success">
+      <div class="icon is-success" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 6 9 17l-5-5" />
+        </svg>
+      </div>
+      <h1>Link verified</h1>
+      <p class="body-text">Open the app to choose a new password.</p>
+      <a class="btn" id="open-app" href="#">Open the app</a>
+      <p class="hint">If nothing happens, open Baby World from your home screen — you&rsquo;ll be asked for a new password.</p>
+    </div>
+
+    <div data-state="expired">
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" />
+        </svg>
+      </div>
+      <h1>This link has expired</h1>
+      <p class="body-text">Password reset links are only valid for a short while. Open the app and tap &ldquo;Forgot password&rdquo; to request a new one.</p>
+      <a class="btn" id="open-app-expired" href="#">Open the app</a>
+    </div>
+
+    <div data-state="error">
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9" /><path d="M12 8v4.5M12 16h.01" />
+        </svg>
+      </div>
+      <h1>We couldn&rsquo;t verify this link</h1>
+      <p class="body-text">It may have already been used, or it was only partly copied. Open the app and tap &ldquo;Forgot password&rdquo; to request a new one.</p>
+      <a class="btn" id="open-app-error" href="#">Open the app</a>
+    </div>
+
+    <div data-state="idle">
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="10" width="16" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" />
+        </svg>
+      </div>
+      <h1>Nothing to reset</h1>
+      <p class="body-text">Open the reset link from your email to choose a new password.</p>
+      <a class="btn" id="open-app-idle" href="#">Open the app</a>
+    </div>
+
+    <noscript>
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="10" width="16" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" />
+        </svg>
+      </div>
+      <h1>Almost there</h1>
+      <p class="body-text">Open Baby World on your phone to finish choosing a new password.</p>
+    </noscript>
+
+  </main>
+
+  <p class="footnote"><a href="https://pregnancyai.io/">pregnancyai.io</a></p>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var DEEP_LINK = "babyworld://reset-password";
+
+  // Capture the raw query and fragment before anything scrubs the address bar.
+  // Supabase returns recovery tokens in the fragment and error details in
+  // either place, so we read both.
+  var rawQuery = window.location.search || "";
+  var rawHash = window.location.hash || "";
+
+  function parse(str) {
+    var out = {};
+    var body = /^[?#]/.test(str) ? str.slice(1) : str;
+    if (!body) return out;
+    body.split("&").forEach(function (pair) {
+      if (!pair) return;
+      var eq = pair.indexOf("=");
+      var key = eq < 0 ? pair : pair.slice(0, eq);
+      var val = eq < 0 ? "" : pair.slice(eq + 1);
+      try { key = decodeURIComponent(key.replace(/\+/g, " ")); } catch (e) {}
+      try { val = decodeURIComponent(val.replace(/\+/g, " ")); } catch (e) {}
+      if (key) out[key] = val;
+    });
+    return out;
+  }
+
+  var params = {};
+  [parse(rawQuery), parse(rawHash)].forEach(function (source) {
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) params[key] = source[key];
+    }
+  });
+
+  // The deep link carries the original payload through untouched so the app can
+  // establish the recovery session itself.
+  var deepLink = DEEP_LINK + rawQuery + rawHash;
+
+  var errorCode = params.error_code || params.error || "";
+  var hasError = !!(errorCode || params.error_description);
+  var hasCredential = !!(params.access_token || params.code || params.token_hash);
+
+  var state;
+  if (hasError) {
+    state = /expired/i.test(errorCode) || /expired/i.test(params.error_description || "")
+      ? "expired"
+      : "error";
+  } else if (hasCredential) {
+    state = "success";
+  } else {
+    state = "idle";
+  }
+
+  ["open-app", "open-app-expired", "open-app-error", "open-app-idle"].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.setAttribute("href", state === "success" ? deepLink : DEEP_LINK);
+  });
+
+  var pending = document.querySelector('[data-state="pending"]');
+  if (pending) pending.classList.remove("is-active");
+  var panel = document.querySelector('[data-state="' + state + '"]');
+  if (panel) panel.classList.add("is-active");
+
+  // Recovery tokens live in the fragment, which we never transmit. Removing
+  // them from the address bar keeps them out of history and any referrer.
+  if (rawQuery || rawHash) {
+    try {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    } catch (e) {}
+  }
+
+  // Auto-open is best-effort: iOS in particular blocks scheme launches that
+  // aren't user-initiated, which is why the button above always stays visible.
+  if (state === "success") {
+    window.setTimeout(function () {
+      try { window.location.href = deepLink; } catch (e) {}
+    }, 600);
+  }
+})();
+</script>
+
+</body>
+</html>

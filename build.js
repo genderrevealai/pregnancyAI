@@ -39,7 +39,18 @@ const STATIC_TOP_FILES = [
   "tools.html",
 ];
 
-const STATIC_DIRS = ["css", "js", "images", "legal", "tools"];
+// "auth" and "reset-password" hold the Supabase redirect landing pages. They are
+// directory-and-index.html so they serve at the extensionless /auth/callback and
+// /reset-password paths the app's email templates point at.
+const STATIC_DIRS = [
+  "css",
+  "js",
+  "images",
+  "legal",
+  "tools",
+  "auth",
+  "reset-password",
+];
 
 async function main() {
   const client = new Client(DB);
