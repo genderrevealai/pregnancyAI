@@ -1503,6 +1503,12 @@ p { color: var(--text-secondary); }
   display: block;
 }
 
+/* Lola's hero is a transparent cut-out rather than a photo, so it must never be
+   cropped to fill the card the way the tool screenshots are. */
+.lola-hero img {
+  object-fit: contain;
+}
+
 /* Quote */
 .quote-card {
   background: var(--bg-card);
